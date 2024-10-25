@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda del Grupo 9</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 bg-light border-bottom watercolor-bg">
+        <nav>
+            <h4>La Tienda del Grupo 9</h4>
+            <div class="search-container">
+                <!-- Ícono de lupita -->
+                <div class="search-icon" id="searchIcon">&#128269;</div>
+                <div class="modal" id="searchModal">
+                    <div class="modal-content">
+                        <!-- Botón de cierre (X) -->
+                        <button type="button"  id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        
+                        <!-- Formulario dentro del modal -->
+                        <h5>¿Qué desea buscar?</h5>
+                        <form id="searchForm">
+                            <input type="text" id="searchInput" class="search-input" placeholder="Escribe tu búsqueda...">
+                            <button type="submit" id="buttonSearch">Buscar</button>
+                        </form>
+                        <p id="noResults" style="display: none;">No se encontraron resultados.</p> <!-- Contenedor para mensaje de "no resultados" -->
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-dark custom-btn-carrito" id="cartBtn"><i class="fa-solid fa-bag-shopping"></i></button>
+                <span class="material-symbols-outlined d-block d-md-none" id="hamburgerMenu">menu</span>
+        </nav>
+            </div>
+        </nav>
+        
+        
+    </header>
+    
+     <!-- Sidebar de categorías oculto por defecto -->
+     <div id="categorySidebar" class="category-sidebar">
+        <h5>Categorías</h5>
+        <div id="categorySidebarButtons">
+            <!-- Botones de categorías se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <div class="container-category"></div>
+        
+        <div id="categoryButtons" class="mb-3">
+            
+            <!-- Aquí se crearán los botones de categorías dinámicamente -->
+        </div>
+
+        <ul id="productList" class="list-group">
+            
+            <!-- Aquí se mostrarán los productos -->
+        </ul>
+    </div>
+
+    <main>
+       
+        <section class="product-grid">
+            <!-- Los productos se agregarán aquí -->
+        </section>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" aria-labelledby="productModalLabel" aria-hidden="true">
+
+        <!-- modal muestra detalle del procuto seleccionado  -->
+    </div>
+
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+    <div class="offcanvas-body">
+        <!-- Aquí se cargarán dinámicamente los productos del carrito -->
+    </div>
+</div>
+
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
